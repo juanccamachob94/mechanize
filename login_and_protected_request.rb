@@ -16,7 +16,7 @@ SEND_HEADER = {'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF
 mechanize = Mechanize.new { |a| a.ssl_version, a.verify_mode = 'TLSv1',OpenSSL::SSL::VERIFY_NONE }
 
 def build_login_form(login_page)
-  login_form = login_page.form_with(id: 'id_of_login_form')
+  login_form = login_page.form_with(id: 'html-id-of-login-form')
   login_form['form[username]'] = 'test'
   login_form['form[password]'] = 'password'
   login_form
