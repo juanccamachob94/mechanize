@@ -24,4 +24,5 @@ end
 
 build_login_form(mechanize.get(LOGIN_URL)).submit
 # #<Mechanize::Page{url#<URI::HTTPS https://...>}{meta_refresh}{title nil}{iframes}{frames}{links}{forms}> - this appears to be empty but it is not
-mechanize.post(SEND_URL, SEND_PARAMS, SEND_HEADER).body
+post_response = mechanize.post(SEND_URL, SEND_PARAMS, SEND_HEADER)
+post_response.body
